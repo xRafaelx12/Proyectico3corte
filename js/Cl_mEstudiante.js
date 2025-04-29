@@ -1,8 +1,8 @@
 export default class Cl_mEstudiante{
-    constructor(cedula,apellido,nombre){
+    constructor({cedula,apellidos,nombres}){
         this.cedula=cedula
-        this.apellido=apellido
-        this.nombre=nombre
+        this.apellidos=apellidos
+        this.nombres=nombres
     }
 
     set cedula(cedula){
@@ -13,20 +13,20 @@ export default class Cl_mEstudiante{
         return this._cedula
     }
 
-    set apellido(apellido){
-        this._apellido=apellido.toUpperCase()
+    set apellidos(apellidos){
+        this._apellidos=apellidos.toUpperCase()
     }
 
-    get apellido(){
-        return this._apellido
+    get apellidos(){
+        return this._apellidos
     }
 
-    set nombre(nombre){
-        this._nombre=nombre.toUpperCase()
+    set nombres(nombres){
+        this._nombres=nombres.toUpperCase()
     }
 
-    get nombre(){
-        return this._nombre
+    get nombres(){
+        return this._nombres
     }
 
 

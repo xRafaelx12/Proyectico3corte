@@ -4,11 +4,11 @@ export default class Cl_mAsistencias{
     }
 
     agregar(datoAgregar){
-        this.array.push(datoAgregar)
+        this.datosAsistencias.push(datoAgregar)
     }
 
-    listadoDeDatos(){
-        return this.array
+    listado(){
+        return this.datosAsistencias
     }
     
 }

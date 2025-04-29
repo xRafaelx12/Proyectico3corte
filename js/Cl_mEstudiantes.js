@@ -4,10 +4,10 @@ export default class Cl_mEstudiantes{
     }
 
     agregar(datoAgregar){
-        this.array.push(datoAgregar)
+        this.datosEstudiantes.push(datoAgregar)
     }
 
-    listadoDeDatos(){
-        return this.array
+    listado(){
+        return this.datosEstudiantes
     }
 }

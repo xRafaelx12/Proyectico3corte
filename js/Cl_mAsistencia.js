@@ -1,8 +1,8 @@
 export default class Cl_mAsistencia{
-    constructor(codigo,fecha,actividad){
+    constructor({codigo,fecha,actividad}){
         this.codigo=codigo
         this.fecha=fecha
-        this.actividad
+        this.actividad=actividad
     }
 
     set codigo(codigo){
@@ -14,15 +14,18 @@ export default class Cl_mAsistencia{
     }
 
     set fecha(fecha){
-        if (typeof fecha === 'string') {
-            return "valido"
-          } else {
-            return("invalido");
-          }
+        if(typeof fecha ==="string"){
+            this._fecha=fecha 
+        }
+        
     }
 
     get fecha(){
-        return this._fecha
+        if(typeof this._fecha ==="string"){
+            return "valido" 
+        }else{
+            return "invalido"
+        }
     }
 
     set actividad(actividad){
