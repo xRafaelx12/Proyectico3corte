@@ -1,6 +1,7 @@
 import Cl_mAsistencias from "./Cl_mAsistencias.js"
 import Cl_mEstudiantes from "./Cl_mEstudiantes.js"
 
+// CLASE PARA LLEVAR UN CONTROL DE TODO
 export default class Cl_mSemestre{
     constructor(nombre){
         this.nombre=nombre

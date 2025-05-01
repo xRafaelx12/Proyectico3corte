@@ -3,7 +3,7 @@ export default class Cl_vAsistencia {
     this.controlador = null;
 
     this.vista = document.getElementById("asistenciaForm");// atributos para concectar toda la vista de asistencia con html 
-    this.vista.hidden = true; // toda la senciones para poner los input estan ocultas al principio
+    this.vista.hidden = true; // toda la secciones para poner los input estan ocultas al principio
 
 
     // atributo para conectar la data del html con el javascript
@@ -42,6 +42,7 @@ export default class Cl_vAsistencia {
   }
   //  metodo para extraer los datos de lo input del html 
 
+  
   
   // metod para asinar los valores al controlador
   iniciar(controlador) {

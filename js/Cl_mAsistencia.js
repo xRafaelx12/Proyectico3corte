@@ -1,10 +1,15 @@
+// CLASE MENOR
+
 export default class Cl_mAsistencia{
     constructor({codigo,fecha,actividad}){
+        
         this.codigo=codigo
         this.fecha=fecha
         this.actividad=actividad
     }
 
+
+    //SET AND GETTERS
     set codigo(codigo){
         this._codigo=codigo.toUpperCase()
     }
@@ -35,4 +40,6 @@ export default class Cl_mAsistencia{
     get actividad(){
         return this._actividad
     }
+
+    //SET AND GETTERS
 }
