@@ -1,3 +1,5 @@
+//CLASE MENOR 
+
 export default class Cl_mEstudiante{
     constructor({cedula,apellidos,nombres}){
         this.cedula=cedula
@@ -5,6 +7,8 @@ export default class Cl_mEstudiante{
         this.nombres=nombres
     }
 
+
+    //SET AND GETTERS
     set cedula(cedula){
         this._cedula=Number(cedula)
     }
@@ -28,6 +32,7 @@ export default class Cl_mEstudiante{
     get nombres(){
         return this._nombres
     }
+    //SET AND GETTERS
 
 
 }

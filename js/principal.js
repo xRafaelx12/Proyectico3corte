@@ -22,16 +22,76 @@
      o El atributo nombre se asigna a CamelCase. 
      o El constructor también construye los objetos atributos
 */
+
+//intancias de toda las clases
 import Cl_vAplicacion from "./Cl_vAplicacion.js";
 import Cl_mAsistencias from "./Cl_mAsistencias.js";
 import Cl_mEstudiantes from "./Cl_mEstudiantes.js";
 import Cl_controlador from "./Cl_controlador.js";
+import Cl_mEstudiante from "./Cl_mEstudiante.js";
+import Cl_mAsistencia from "./Cl_mAsistencia.js";
+//intancias de toda las clases
+
 
 export default class Cl_principal {
   constructor() {
     let vistaApp = new Cl_vAplicacion();
     let mAsistencias = new Cl_mAsistencias();
+
+    let arrA = [
+      { codigo:"123", 
+        fecha: "20-11",
+        actividad: "dibujar"
+
+      },{
+        codigo:"134", 
+        fecha: "10-10",
+        actividad: "futbol"
+      },{
+        codigo:"145", 
+        fecha: "14-10",
+        actividad: "pintar"
+      }
+    ]
+
+    arrA.forEach(asistencia => {
+      mAsistencias.agregar(new Cl_mAsistencia({
+        codigo:asistencia.codigo,
+        fecha:asistencia.fecha,
+        actividad:asistencia.actividad
+      }))
+    })
+
+
     let mEstudiantes = new Cl_mEstudiantes();
+
+    let arrE = [
+      {cedula:30923175, 
+      apellidos: "abarca",
+      nombres: "lismar"
+
+     },{
+       cedula:29976020, 
+       apellidos: "perez",
+       nombres: "rafael"
+
+     },{
+       cedula:30845208, 
+      apellidos: "escalona",
+      nombres: "maria"
+
+     }]
+
+
+    arrE.forEach(estudiante => {
+      mEstudiantes.agregar(new Cl_mEstudiante({
+        cedula: estudiante.cedula,
+        apellidos: estudiante.apellidos,
+        nombres: estudiante.nombres,
+      }))
+    })
+
+
     let controlador = new Cl_controlador({
       mEstudiantes: mEstudiantes,
       mAsistencias: mAsistencias,
